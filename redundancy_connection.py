@@ -10,7 +10,7 @@ class Solution(object):
 
         # 作用：找到节点 index 所在集合的根节点
         # 路径压缩：把沿途所有节点直接挂到根节点下面，扁平化树高，后续查询更快。
-        # 递归写法：简洁，但深度过大时可能爆栈（本题节点数 ≤ 1000，安全）。
+        # 递归写法：简洁，但深度过大时可能爆栈（本题节点数 ≤ 1000，``安全）。
         def find(index):
             if parent[index] != index:
                 parent[index] = find(parent[index])
